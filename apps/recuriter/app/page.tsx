@@ -1,63 +1,63 @@
 // app/page.js
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
-  const [companyName, setCompanyName] = useState("");
-  const [email, setEmail] = useState("");
+  const [companyName, setCompanyName] = useState('');
+  const [email, setEmail] = useState('');
 
   // Sample plans/pricing data
   const pricingPlans = [
     {
       id: 1,
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for startups and small teams hiring occasionally.",
+      name: 'Starter',
+      price: '$199',
+      period: '/month',
+      description: 'Perfect for startups and small teams hiring occasionally.',
       features: [
-        "5 active job postings",
-        "20 candidate applications",
-        "Basic candidate filtering",
-        "Email support",
+        '5 active job postings',
+        '20 candidate applications',
+        'Basic candidate filtering',
+        'Email support',
       ],
-      cta: "Get Started",
+      cta: 'Get Started',
       popular: false,
     },
     {
       id: 2,
-      name: "Growth",
-      price: "$499",
-      period: "/month",
-      description: "Ideal for growing companies with regular hiring needs.",
+      name: 'Growth',
+      price: '$499',
+      period: '/month',
+      description: 'Ideal for growing companies with regular hiring needs.',
       features: [
-        "15 active job postings",
-        "Unlimited applications",
-        "Advanced candidate matching",
-        "Resume parsing & ranking",
-        "Priority support",
+        '15 active job postings',
+        'Unlimited applications',
+        'Advanced candidate matching',
+        'Resume parsing & ranking',
+        'Priority support',
       ],
-      cta: "Start 14-day Trial",
+      cta: 'Start 14-day Trial',
       popular: true,
     },
     {
       id: 3,
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
       description:
-        "For large organizations with high-volume recruitment needs.",
+        'For large organizations with high-volume recruitment needs.',
       features: [
-        "Unlimited job postings",
-        "Custom recruitment pipeline",
-        "ATS integration",
-        "Dedicated account manager",
-        "Custom reporting & analytics",
-        "Bulk recruiting tools",
+        'Unlimited job postings',
+        'Custom recruitment pipeline',
+        'ATS integration',
+        'Dedicated account manager',
+        'Custom reporting & analytics',
+        'Bulk recruiting tools',
       ],
-      cta: "Contact Sales",
+      cta: 'Contact Sales',
       popular: false,
     },
   ];
@@ -66,9 +66,9 @@ export default function Home() {
   const benefits = [
     {
       id: 1,
-      title: "Access Top Tech Talent",
+      title: 'Access Top Tech Talent',
       description:
-        "Connect with pre-vetted developers from our pool of 10,000+ skilled professionals.",
+        'Connect with pre-vetted developers from our pool of 10,000+ skilled professionals.',
       icon: (
         <svg
           className="h-6 w-6 text-indigo-600"
@@ -88,9 +88,9 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "AI-Powered Matching",
+      title: 'AI-Powered Matching',
       description:
-        "Our algorithm identifies the most qualified candidates for your specific requirements.",
+        'Our algorithm identifies the most qualified candidates for your specific requirements.',
       icon: (
         <svg
           className="h-6 w-6 text-indigo-600"
@@ -110,9 +110,9 @@ export default function Home() {
     },
     {
       id: 3,
-      title: "Faster Time-to-Hire",
+      title: 'Faster Time-to-Hire',
       description:
-        "Reduce your hiring cycle by up to 70% with streamlined processes and qualified candidates.",
+        'Reduce your hiring cycle by up to 70% with streamlined processes and qualified candidates.',
       icon: (
         <svg
           className="h-6 w-6 text-indigo-600"
@@ -132,7 +132,7 @@ export default function Home() {
     },
     {
       id: 4,
-      title: "Custom Recruitment Pipeline",
+      title: 'Custom Recruitment Pipeline',
       description:
         "Tailor your hiring workflow to match your company's unique needs and culture.",
       icon: (
@@ -156,16 +156,15 @@ export default function Home() {
 
   // Success metrics
   const metrics = [
-    { id: 1, value: "87%", label: "Successful placements" },
-    { id: 2, value: "12 days", label: "Average time to hire" },
-    { id: 3, value: "92%", label: "Client retention" },
-    { id: 4, value: "98%", label: "Candidate match rate" },
+    { id: 1, value: '87%', label: 'Successful placements' },
+    { id: 2, value: '12 days', label: 'Average time to hire' },
+    { id: 3, value: '92%', label: 'Client retention' },
+    { id: 4, value: '98%', label: 'Candidate match rate' },
   ];
 
   return (
     <div className="min-h-screen bg-white w-full">
       {/* Header/Navigation */}
-    
 
       {/* Hero Section */}
       <main>
@@ -209,7 +208,7 @@ export default function Home() {
                         key={item}
                         className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-indigo-100 flex items-center justify-center text-xs text-indigo-600 font-medium"
                       >
-                        {["AB", "TC", "MS", "JD", "KP"][item - 1]}
+                        {['AB', 'TC', 'MS', 'JD', 'KP'][item - 1]}
                       </div>
                     ))}
                   </div>
@@ -290,14 +289,14 @@ export default function Home() {
                   </div>
                   <div className="px-4 py-6 bg-gray-50 border-t-2 border-gray-200 sm:px-10">
                     <p className="text-xs leading-5 text-gray-500">
-                      By signing up, you agree to our{" "}
+                      By signing up, you agree to our{' '}
                       <Link
                         href="#"
                         className="font-medium text-gray-900 hover:underline"
                       >
                         Terms of Service
-                      </Link>{" "}
-                      and{" "}
+                      </Link>{' '}
+                      and{' '}
                       <Link
                         href="#"
                         className="font-medium text-gray-900 hover:underline"
@@ -538,7 +537,7 @@ export default function Home() {
               {pricingPlans.map((plan) => (
                 <div
                   key={plan.id}
-                  className={`rounded-lg shadow-lg divide-y divide-gray-200 ${plan.popular ? "border-2 border-indigo-500" : "border border-gray-200"}`}
+                  className={`rounded-lg shadow-lg divide-y divide-gray-200 ${plan.popular ? 'border-2 border-indigo-500' : 'border border-gray-200'}`}
                 >
                   {plan.popular && (
                     <div className="bg-indigo-500 rounded-t-lg py-2 text-center">
@@ -548,7 +547,7 @@ export default function Home() {
                     </div>
                   )}
                   <div
-                    className={`p-6 ${plan.popular && !plan.popular ? "rounded-t-lg" : ""}`}
+                    className={`p-6 ${plan.popular && !plan.popular ? 'rounded-t-lg' : ''}`}
                   >
                     <h3 className="text-lg leading-6 font-medium text-gray-900">
                       {plan.name}
@@ -568,8 +567,8 @@ export default function Home() {
                       href="#"
                       className={`mt-8 block w-full py-3 px-6 rounded-md shadow text-center text-sm font-medium ${
                         plan.popular
-                          ? "text-white bg-indigo-600 hover:bg-indigo-700"
-                          : "text-indigo-700 bg-indigo-50 hover:bg-indigo-100"
+                          ? 'text-white bg-indigo-600 hover:bg-indigo-700'
+                          : 'text-indigo-700 bg-indigo-50 hover:bg-indigo-100'
                       }`}
                     >
                       {plan.cta}

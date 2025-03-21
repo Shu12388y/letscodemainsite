@@ -1,5 +1,5 @@
-import React from "react";
-function Navbar({ headerRoutes = [{ name: "Home", route: "/" }] }) {
+import React from 'react';
+function Navbar({ headerRoutes = [{ name: 'Home', route: '/' }] }) {
   return (
     <>
       <header className="bg-white shadow-sm border-b">
@@ -14,7 +14,7 @@ function Navbar({ headerRoutes = [{ name: "Home", route: "/" }] }) {
               {headerRoutes.map((ele, index) => {
                 return (
                   <a
-                    key={index + "-" + index}
+                    key={index + '-' + index}
                     href={ele.route}
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium"
                   >
